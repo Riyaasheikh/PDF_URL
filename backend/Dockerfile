@@ -45,5 +45,6 @@ RUN echo 'server { \n\
 }' > /etc/nginx/sites-available/default
 
 # Expose port 80 and start server
-EXPOSE 80
-CMD service nginx start && php-fpm
+# Expose dynamic port and start server
+EXPOSE 8000
+CMD service nginx start && php-fpm -D && tail -f /dev/null
