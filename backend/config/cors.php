@@ -15,7 +15,7 @@ return [
         'https://pdf-url-frontend.vercel.app/'
     ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => [ '#^https://pdf-url-frontend.*\.vercel\.app$#',],
 
     'allowed_headers' => ['*'],
 
