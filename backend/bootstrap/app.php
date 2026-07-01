@@ -18,7 +18,6 @@ return Application::configure(basePath: dirname(__DIR__))
         // Exclude cross-origin API endpoints from strict CSRF tracking tokens
         $middleware->validateCsrfTokens(except: ['api/v/*', 'v/*']);
 
-        // Append global CORS handling middleware layers safely
         $middleware->append(\Illuminate\Http\Middleware\HandleCors::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
